@@ -36,7 +36,3 @@ Implemented calculator calculation functionality.
 
 ### Commit 3
 Completed the calculator with UI, responsiveness and additional functionality.
-
-## Author
-
-Student Project — 2026
