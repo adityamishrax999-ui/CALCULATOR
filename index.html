@@ -1,71 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Calculator</title>
+
+    <title>MathBloom Calculator</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="calculator">
+    <!-- Animated mathematical background -->
 
-        <div class="calculator-header">
-            <h1>Smart Calculator</h1>
-            <p>Simple • Fast • Accurate</p>
-        </div>
+    <div class="math-background">
 
-        <div class="display">
-            <div id="previous-display"></div>
-            <div id="current-display">0</div>
-        </div>
-
-        <div class="buttons">
-
-            <button class="operator">AC</button>
-            <button class="operator">DEL</button>
-            <button class="operator">%</button>
-            <button class="operator">÷</button>
-
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="operator">×</button>
-
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="operator">−</button>
-
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="operator">+</button>
-
-            <button>0</button>
-            <button>.</button>
-            <button class="equals">=</button>
-
-        </div>
-
-        <!-- HISTORY SECTION -->
-        <div class="history-section">
-
-            <div class="history-header">
-                <h2>History</h2>
-                <button id="clear-history">Clear</button>
-            </div>
-
-            <div id="history-list">
-                <p class="empty-history">No calculations yet</p>
-            </div>
-
-        </div>
+        <span>π</span>
+        <span>∞</span>
+        <span>√x</span>
+        <span>∫</span>
+        <span>Σ</span>
+        <span>Δ</span>
+        <span>θ</span>
+        <span>f(x)</span>
+        <span>E = mc²</span>
+        <span>x² + y²</span>
+        <span>sin(x)</span>
+        <span>cos(x)</span>
 
     </div>
+
+
+    <!-- Floating flowers -->
+
+    <div class="flowers">
+
+        <span>✿</span>
+        <span>✿</span>
+        <span>❀</span>
+        <span>✿</span>
+        <span>❀</span>
+        <span>✿</span>
+
+    </div>
+
+
+    <!-- Small glowing particles -->
+
+    <div class="particles">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <!-- Main Calculator -->
+
+    <main class="calculator">
+
+        <div class="calculator-top">
+
+            <div>
+                <p class="mini-title">MATHBLOOM</p>
+                <h1>Calculator</h1>
+            </div>
+
+            <div class="status-dot"></div>
+
+        </div>
+
+
+        <!-- Display -->
+
+        <section class="display">
+
+            <div id="previous-display">
+                0
+            </div>
+
+            <div id="current-display">
+                0
+            </div>
+
+        </section>
+
+
+        <!-- Calculator Buttons -->
+
+        <section class="buttons">
+
+            <button class="special" data-action="clear">
+                AC
+            </button>
+
+            <button class="special" data-action="delete">
+                DEL
+            </button>
+
+            <button class="special" data-action="percentage">
+                %
+            </button>
+
+            <button class="operator" data-operator="÷">
+                ÷
+            </button>
+
+
+            <button data-number="7">7</button>
+            <button data-number="8">8</button>
+            <button data-number="9">9</button>
+
+            <button class="operator" data-operator="×">
+                ×
+            </button>
+
+
+            <button data-number="4">4</button>
+            <button data-number="5">5</button>
+            <button data-number="6">6</button>
+
+            <button class="operator" data-operator="−">
+                −
+            </button>
+
+
+            <button data-number="1">1</button>
+            <button data-number="2">2</button>
+            <button data-number="3">3</button>
+
+            <button class="operator" data-operator="+">
+                +
+            </button>
+
+
+            <button class="zero" data-number="0">
+                0
+            </button>
+
+            <button data-number=".">
+                .
+            </button>
+
+            <button class="equals">
+                =
+            </button>
+
+        </section>
+
+
+        <!-- History -->
+
+        <section class="history">
+
+            <div class="history-title">
+
+                <div>
+                    <span class="history-icon">⌁</span>
+                    <span>Calculation History</span>
+                </div>
+
+                <button id="clear-history">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div id="history-list">
+
+                <div class="empty-history">
+                    Your calculations will appear here
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <span>Designed with mathematics</span>
+            <span>•</span>
+            <span>2026</span>
+        </footer>
+
+    </main>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
