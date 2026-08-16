@@ -238,43 +238,72 @@ clearHistoryButton.addEventListener("click", () => {
 // =============================
 // BUTTON EVENTS
 // =============================
+const numberButtons =
+    document.querySelectorAll("[data-number]");
 
-buttons.forEach(button => {
+const operatorButtons =
+    document.querySelectorAll("[data-operator]");
+
+const clearButton =
+    document.querySelector('[data-action="clear"]');
+
+const deleteButton =
+    document.querySelector('[data-action="delete"]');
+
+const percentageButton =
+    document.querySelector('[data-action="percentage"]');
+
+const equalsButton =
+    document.querySelector(".equals");
+
+
+numberButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        const value = button.textContent;
+        enterNumber(button.dataset.number);
 
-        if (!isNaN(value) || value === ".") {
-
-            enterNumber(value);
-
-        } else if (
-            value === "+" ||
-            value === "−" ||
-            value === "×" ||
-            value === "÷"
-        ) {
-
-            chooseOperator(value);
-
-        } else if (value === "=") {
-
-            calculate();
-
-        } else if (value === "AC") {
-
-            clearCalculator();
-
-        } else if (value === "DEL") {
-
-            deleteNumber();
-
-        } else if (value === "%") {
-
-            percentage();
-        }
     });
+
+});
+
+
+operatorButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        chooseOperator(button.dataset.operator);
+
+    });
+
+});
+
+
+clearButton.addEventListener("click", () => {
+
+    clearCalculator();
+
+});
+
+
+deleteButton.addEventListener("click", () => {
+
+    deleteNumber();
+
+});
+
+
+percentageButton.addEventListener("click", () => {
+
+    percentage();
+
+});
+
+
+equalsButton.addEventListener("click", () => {
+
+    calculate();
+
 });
 
 
