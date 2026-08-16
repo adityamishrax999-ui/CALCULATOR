@@ -10,7 +10,9 @@ let currentValue = "";
 let previousValue = "";
 let operator = null;
 
-let calculationHistory = [];
+
+let calculationHistory =
+    JSON.parse(localStorage.getItem("calculatorHistory")) || [];
 
 
 // =============================
@@ -178,7 +180,6 @@ function percentage() {
 // =============================
 // HISTORY
 // =============================
-
 function addToHistory(expression, result) {
 
     calculationHistory.push({
@@ -186,8 +187,14 @@ function addToHistory(expression, result) {
         result: result
     });
 
+    localStorage.setItem(
+        "calculatorHistory",
+        JSON.stringify(calculationHistory)
+    );
+
     displayHistory();
 }
+
 
 
 function displayHistory() {
@@ -216,13 +223,16 @@ function displayHistory() {
     });
 }
 
-
 clearHistoryButton.addEventListener("click", () => {
 
     calculationHistory = [];
 
+    localStorage.removeItem("calculatorHistory");
+
     displayHistory();
 });
+
+
 
 
 // =============================
